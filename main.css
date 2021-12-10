@@ -5,6 +5,10 @@
     height: 100vh;
   }
   
+  h1 {
+    font-family: cursive;
+  }
+
   img {
     margin-bottom: 500px;
   }
