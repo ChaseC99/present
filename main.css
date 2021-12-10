@@ -1,0 +1,224 @@
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  img {
+    margin-bottom: 500px;
+  }
+
+  .birthday-gift {
+    position: relative;
+  }
+  
+  .birthday-gift:before {
+    content:"";
+    position: absolute;
+    width: 340px;
+    height:40px;
+    border-radius:50%;
+    background-color: rgba(0,0,0,0.4);
+    top:180px;
+    left:-20px;
+  }
+  
+  input#click {
+    display: none;
+  }
+  
+  .gift {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #e9c46a;
+  }
+  
+  .gift:before {
+    content:"";
+    position: absolute;
+    width: 50px;
+    height: 200px;
+    background-color: #e76f51;
+    left:124px;
+  }
+  
+  .gift:after {
+    content:"";
+    position: absolute;
+    box-shadow: inset 0 20px rgba(0,0,0,0.3);
+    width: 300px;
+    height: 200px;
+  }
+  
+  .click {
+    position: absolute;
+    background-color: #e9c46a;
+    width: 340px;
+    height: 80px;
+    top:-80px;
+    left:-20px;
+    transform-origin: bottom left;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .click:before {
+    content:"";
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: #e76f51;
+    left:138px;
+  }
+  
+  .click:after {
+    content:"";
+    position: absolute;
+    width: 10px;
+    height: 0;
+    border-bottom: 60px solid #e76f51;
+    border-top: 60px solid #e76f51;
+    border-left: 0px solid transparent;
+    border-right: 60px solid transparent;
+    transform: rotate(-90deg);
+    left:130px;
+    top:-94px;
+  }
+  
+  #click:checked + .click {
+    transform: rotate(-110deg) scaleX(0.85);
+  }
+  
+  .wishes {
+    position: absolute;
+    transition: .5s;
+    color: #333;
+    font-size: 37px;
+    text-align: center;
+    z-index:-1;
+    left:-188px;
+    top:-700px;
+    visibility: hidden;
+  }
+  
+  #click:checked ~ .wishes {
+    transform: translateY(-100px);
+    visibility: visible;
+  }
+  
+  #click:checked ~ .sparkles {
+    display: block;
+  }
+  
+  .sparkles {
+    position: absolute;
+    display: none;
+    top:-30px;
+    left:80px;
+  }
+  
+  .spark1, .spark2, .spark3, .spark4, .spark5, .spark6 {
+    position: absolute;
+    border-radius:50%;
+    top:-18px;
+    size: 20px;
+  }
+  
+  .spark1 {
+    width: 64px;
+    height: 64px;
+    left:60px;
+    top:-18px;
+    animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
+  }
+  
+  .spark1:before {
+    content:"";
+    position: absolute;
+    width:10px;
+    height:10px;
+    top:16px;
+    left:22px;
+    border-radius:50%;
+  }
+  
+  .spark2 {
+    width: 18px;
+    height: 18px;
+    left: 66px;
+    top:-10px;
+    animation: fire2 0.5s ease-in-out infinite, color 0.4s linear infinite;
+  }
+  
+  .spark2:before {
+    content:"";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 24px;
+    left: 6px;
+    border-radius:50%;
+  }
+  
+  .spark3 {
+    width: 8.5px;
+    height:8.5px;
+    left:33px;
+    top:-5px;
+    animation: fire3 1.1s ease-in-out infinite, color2 1s linear infinite;
+  }
+  
+  .spark3:before {
+    content:"";
+    position: absolute;
+    width:5px;
+    height:5px;
+    top:12px;
+    left:-1px;
+    border-radius:50%;
+  }
+  
+  .spark4 {
+    width: 7px;
+    height:7px;
+    left:27px;
+    top:-5px;
+    animation: fire2 0.75s ease-in-out infinite, color2 0.8s linear infinite;
+  }
+  
+  .spark5 {
+    width: 7px;
+    height:7px;
+    left:29px;
+    top:-5px;
+    animation: fire3 1.3s ease-in-out infinite, color 1.2s linear infinite;
+  }
+  
+  .spark6 {
+    width: 6px;
+    height:6px;
+    left:29px;
+    top:-5px;
+    animation: fire 1s ease-in-out infinite, color2 1s linear infinite;
+  }
+    
+  @keyframes fire3 {
+    100% { transform:translateX(20px) translateY(-93px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes fire2 {
+    100% { transform:translateX(-5px) translateY(-90px); 
+           opacity: 0.3; }
+  }
+  
+  @keyframes fire {
+    100% { transform:translateX(-25px) translateY(-95px); 
+           opacity: 0.3; }
+  }
+  
+  
+  
+  
